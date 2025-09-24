@@ -1,0 +1,5 @@
+CREATE TABLE TBL_ROLES (
+    idRoles SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL UNIQUE,
+    descripcion VARCHAR(255)
+);

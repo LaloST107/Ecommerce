@@ -9,7 +9,11 @@ CREATE TABLE TBL_USUARIOS (
     idUsuario INT PRIMARY KEY DEFAULT nextval('SEQ_ID_USUARIO'),
     nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
     correo VARCHAR(100) NOT NULL UNIQUE,
-    contraseña VARCHAR(255) NOT NULL,
-    activo BOOLEAN DEFAULT TRUE,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    contrasena VARCHAR(255) NOT NULL,
+    ap_paterno VARCHAR(50) NULL,
+    ap_materno VARCHAR(50) NULL,
+    activo VARCHAR(50) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    idRoles INT NOT NULL,
+    CONSTRAINT fk_roles FOREIGN KEY (idRoles) REFERENCES TBL_ROLES (idRoles)
 );

@@ -9,4 +9,4 @@ CREATE TABLE TBL_ROLES (
     idRoles INT PRIMARY KEY DEFAULT nextval('SEQ_ID_ROLES'),
     nombre VARCHAR(50) NOT NULL UNIQUE,
     descripcion VARCHAR(255)
-)
+);

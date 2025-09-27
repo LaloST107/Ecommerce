@@ -1,0 +1,16 @@
+CREATE SEQUENCE SEQ_ID_PROVEEDOR
+START WITH 1
+INCREMENT BY 1
+NO MINVALUE
+NO MAXVALUE
+CACHE 1;
+
+
+CREATE TABLE Proveedores (
+    id_proveedor INT PRIMARY KEY DEFAULT nextval('SEQ_ID_PROVEEDOR'),
+    nombre VARCHAR(100) NOT NULL,
+    contacto VARCHAR(100),
+    direccion VARCHAR(255),
+    condiciones TEXT,
+    TipoDePersona VARCHAR(50)
+);

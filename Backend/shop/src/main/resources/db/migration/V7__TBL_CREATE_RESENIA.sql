@@ -1,0 +1,16 @@
+CREATE SEQUENCE SEQ_ID_RESENIA
+START WITH 1
+INCREMENT BY 1
+NO MINVALUE
+NO MAXVALUE
+CACHE 1;
+
+-- Tabla
+CREATE TABLE Resenas (
+    id_resena INT PRIMARY KEY DEFAULT nextval('SEQ_ID_RESENIA'),
+    usuario_id INT NOT NULL,
+    producto_id INT NOT NULL,
+    puntuacion INT CHECK (puntuacion BETWEEN 1 AND 5),
+    texto_resena TEXT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

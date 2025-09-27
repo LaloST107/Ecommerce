@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS TBL_SUBCATEGORIAS (
+    id_subcategoria SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    categoria_id INT REFERENCES TBL_CATEGORIAS(id_categoria) ON DELETE CASCADE
+);
